@@ -3,14 +3,14 @@ return {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
     },
-    {
-        'projekt0n/github-nvim-theme',
-        lazy = false,
-        priority = 1000,
-        config = function()
-            vim.cmd.colorscheme('github_dark_dimmed')
-        end
-    },
+    -- {
+    --     'projekt0n/github-nvim-theme',
+    --     lazy = false,
+    --     priority = 1000,
+    --     config = function()
+    --         vim.cmd.colorscheme('github_dark_tritanopia')
+    --     end
+    -- },
     { 'tpope/vim-fugitive' },
     { 'lewis6991/gitsigns.nvim' },
     {
@@ -26,5 +26,19 @@ return {
     {'hrsh7th/nvim-cmp'},
     {'L3MON4D3/LuaSnip'},
 
-    {'akinsho/toggleterm.nvim', version = "*", config = true}
+    {'akinsho/toggleterm.nvim', version = "*", config = true},
+    {'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
+    {
+      'nvim-lualine/lualine.nvim',
+      dependencies = { 'nvim-tree/nvim-web-devicons', opt = true }
+    },
+    {
+        'luisiacc/the-matrix.nvim',
+        lazy = false,
+        priority = 1000,
+        config = function()
+            vim.cmd.colorscheme('thematrix')
+            vim.g.thematrix_telescope_mode = 1
+        end
+    },
 }
