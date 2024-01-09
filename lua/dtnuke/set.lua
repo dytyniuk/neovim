@@ -9,7 +9,7 @@ vim.opt.smartindent = true
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true

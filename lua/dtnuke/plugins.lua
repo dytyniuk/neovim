@@ -3,14 +3,6 @@ return {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
     },
-    -- {
-    --     'projekt0n/github-nvim-theme',
-    --     lazy = false,
-    --     priority = 1000,
-    --     config = function()
-    --         vim.cmd.colorscheme('github_dark_tritanopia')
-    --     end
-    -- },
     { 'tpope/vim-fugitive' },
     { 'lewis6991/gitsigns.nvim' },
     {
@@ -41,4 +33,28 @@ return {
             vim.g.thematrix_telescope_mode = 1
         end
     },
+    {'simrat39/symbols-outline.nvim'},
+    {
+        'folke/trouble.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+    },
+    {
+        'cameron-wags/rainbow_csv.nvim',
+        config = true,
+        ft = {
+            'csv',
+            'tsv',
+            'csv_semicolon',
+            'csv_whitespace',
+            'csv_pipe',
+            'rfc_csv',
+            'rfc_semicolon'
+        },
+        cmd = {
+            'RainbowDelim',
+            'RainbowDelimSimple',
+            'RainbowDelimQuoted',
+            'RainbowMultiDelim'
+        }
+    }
 }
